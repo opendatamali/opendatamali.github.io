@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Open Data Mali</title>
+    <link rel="stylesheet" href="static/css/buttons.css" type="text/css">
+	<link rel="stylesheet" href="static/css/home.css" type="text/css" />
+</head>
+<body class="" lang="fr-FR">
+<header>
+	<img src="static/img/logo_opendata.png" />
+</header>
+<div class="content">
+	<ul class="dashboards">
+		<li class="button button-action">Chargement…</li>
+	</ul>
+</div>
+<footer>
+<p>Tableaux de bords (pas les données) sous licence <a href="http://freedomdefined.org/Licenses/CC-BY-3.0" title="Creative Commons Attribution License">CC-BY-3.0</a>, sauf si contre-indication. <a href="http://opendatamali.org">Open Data Mali</a>.</p>
+</footer>
+<script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function (){
+	$.getJSON('dashboards.json').done(function (data) {
+		var list = $("<ul />");
+		list.addClass('dashboards');
+		console.log(data);
+		for (var i=0; i<data.length; i++) {
+			var dash = data[i];
+			console.log(dash);
+			var listItem = $("<li />");
+			var link = $("<a />");
+			link.attr('href', dash.url.content);
+			link.html(dash.title);
+			link.addClass('button button-action');
+			listItem.append(link);
+			var desc = $("<p/>");
+			desc.html(dash.short_desc);
+			listItem.append(desc);
+			list.append(listItem);
+		}
+		$("ul.dashboards").replaceWith(list);
+	});
+});
+</script>
+</body>
+</html>
