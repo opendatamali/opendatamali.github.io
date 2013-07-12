@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Hotline - SOS Démocratie</title>
+<link href="static/css/bootstrap.min.css" rel="stylesheet">
+<link href="static/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="static/css/hotline.css" rel="stylesheet">
+<link href="static/css/flot.css" rel="stylesheet">
+</head>
+<body class="">
+<div class="container">
+
+<div class="row-fluid">
+<div class="span8">
+<h1>Hotline SOS Démocratie</h1>
+</div>
+<div class="span4" style="text-align:right;">
+<h2 style="color:orange;">91 16 16 76</h2>
+<h2 style="color:blue;">67 56 52 52</h2>
+</div>
+</div>
+
+
+<div class="alert alert-info">
+<p>Cette page présente les données de la <strong>Hotline SOS Démocratie</strong> à un instant <em>t</em>.</p>
+<p>Elle devrait être mise à jour régulièrement (environ toutes les 5mn) pendant toute la durée du projet (juillet-août-septembre 2013).</p>
+<p>Les données brutes complète sont disponible sur <a href="http://opendata.ml">Open Data Mali</a>.</p>
+<p>Pour en savoir plus, voir <a href="#about">ci-dessous</a>.</p>
+</div>
+
+
+<table class="table table-condensed table-hover table-bordered table-striped table-info">
+    <tbody>
+        <tr>
+            <th class="span8">Dernier appel</th>
+            <td class="span4">July 12, 2013, 3:33 p.m.</td>
+        </tr>
+        <tr>
+            <th>Nombre d'appels non traités</th>
+            <td>0</td>
+        </tr>
+        <tr>
+            <th>Nombre de rappels à saisir</th>
+            <td>116</td>
+        </tr>
+        <tr>
+            <th>Nombre total d'appels</th>
+            <td class="total">358</td>
+        </tr>
+        
+        
+        <tr>
+            <th class="ident">Total Orange</th>
+            <td>204</td>
+        </tr>
+        
+        <tr>
+            <th class="ident">Total Malitel</th>
+            <td>153</td>
+        </tr>
+        
+        <tr>
+            <th class="ident">Peux-tu me rappeler?</th>
+            <td>27</td>
+        </tr>
+        <tr>
+            <th class="ident">Peux-tu recharger mon compte?</th>
+            <td>4</td>
+        </tr>
+        <tr>
+            <th class="ident">Bip.</th>
+            <td>306</td>
+        </tr>
+        <tr>
+            <th class="ident">SMS à déterminer.</th>
+            <td>0</td>
+        </tr>
+        <tr>
+            <th class="ident">SMS (Hotline).</th>
+            <td>18</td>
+        </tr>
+        <tr>
+            <th class="ident">SMS (Ushahidi).</th>
+            <td>1</td>
+        </tr>
+        <tr>
+            <th class="ident">SMS (SPAM)</th>
+            <td>2</td>
+        </tr>
+        <tr>
+            <th>Total par sexes (Homme/Femme/Inconnu)</th>
+            <td>177 H, 30 F, 34 Inconnus</td>
+        </tr>
+    </tbody>
+    </table>
+
+
+
+
+<h2>Nombre des rappels par région</h2>
+    <table class="table table-condensed table-hover table-bordered table-striped table-info">
+    <thead>
+    <tr>
+    <th class="span2">Région</th>
+    <th class="span2">Nombre</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr><td>KAYES</td>
+            <td><strong>4</strong></td>
+    
+        <tr><td>KOULIKORO</td>
+            <td><strong>20</strong></td>
+    
+        <tr><td>SIKASSO</td>
+            <td><strong>24</strong></td>
+    
+        <tr><td>SÉGOU</td>
+            <td><strong>6</strong></td>
+    
+        <tr><td>MOPTI</td>
+            <td><strong>1</strong></td>
+    
+        <tr><td>TOMBOUCTOU</td>
+            <td><strong>4</strong></td>
+    
+        <tr><td>GAO</td>
+            <td><strong>0</strong></td>
+    
+        <tr><td>KIDAL</td>
+            <td><strong>0</strong></td>
+    
+        <tr><td>BAMAKO</td>
+            <td><strong>149</strong></td>
+    
+        <tr><td>HORS DU MALI</td>
+            <td><strong>1</strong></td>
+    
+        <tr><td>Inconnue</td>
+            <td><strong>32</strong></td>
+    
+    </tbody>
+    </table>
+
+
+
+<h2>Graphe des événements</h2>
+<div class="flot-container">
+    <div id="placeholder" class="flot-placeholder"></div>
+</div>
+
+<div class="about">
+<a name="about"></a>
+<h2>À Propos</h2>
+<p>La Hotline SOS Démocratie est une initiative de <strong>Jokkolabs</strong> pour soutenir les actions de sensibilisation de l'association <strong>SOS Démocratie</strong>, en vue de l'élection présidentielle de Juillet 2013.</p>
+<p>Concrètement, deux numéros (un par opérateur) sont mis à disposition du public qui peut les “<em>biper</em>” à tout moment. Instantanément, ils reçoivent un message SMS les informant qu'un volontaire de SOS Démocratie va les rappeler.</p>
+<p>Ensuite, par ordre d'arrivée, les volontaires rappellent tous les numéros et répondent à toutes les questions sur <em>la démocratie</em>, <em>le vote</em>, etc.</p>
+
+<h3>Jokkolabs</h3>
+<ul>
+	<li>Conception, développement, déploiement de la Hotline</li>
+	<li>Équipements (modems, serveur)</li>
+	<li>Monitoring, maintenance</li>
+	<li>Hébergement des volontaires (salle d'appels)</li>
+	<li>Saisie et publication des données (Open Data Mali).</li>
+</ul>
+<h3>SOS Démocratie</h3>
+<ul>
+	<li>Développement du guide de réponse des volontaires.</li>
+	<li>Mise à disposition des volontaires (tours de garde).</li>
+	<li>Promotion de la Hotline lors de toutes les activités.</li>
+	<li>Supervision des volontaires.</li>
+</ul>
+<h3>USAID</h3>
+<ul>
+	<li>Financement des coûts téléphonique.</li>
+	<li>Financement des coûts promotionnels (presse, radio, TV).</li>
+	<li>Financement du stipend volontaire (frais de transport jusqu'à Jokkolabs).</li>
+</ul>
+</div>
+<div class="sponsors">
+    <a href="http://jokkolabs.ml"><img src="static/img/jokkolabs.png" /></a>
+    <a href="http://opendata.ml"><img src="static/img/opendata.png" /></a>
+    <a href="http://usaid.gov"><img src="static/img/usaid.png" /></a>
+    <a href="http://sosdemocratiemali.org"><img src="static/img/sosdemo.jpg" /></a>
+</div>
+
+
+</div>
+
+<script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.flot.js"></script>
+<script type="text/javascript" src="static/js/jquery.flot.time.js"></script>
+<script type="text/javascript" src="static/js/jquery.flot.selection.js"></script>
+<script type="text/javascript">
+$(document).ready(function (){
+    
+    $.getJSON('graph_data.json', function(data) {
+
+    var requests = data.requests;
+    var responses = data.responses;
+
+    // helper for returning the weekends in a period
+
+    function weekendAreas(axes) {
+
+        var markings = [],
+            requests = new Date(axes.xaxis.min);
+
+        // go to the first Saturday
+
+        requests.setUTCDate(requests.getUTCDate() - ((requests.getUTCDay() + 1) % 7))
+        requests.setUTCSeconds(0);
+        requests.setUTCMinutes(0);
+        requests.setUTCHours(0);
+
+        var i = requests.getTime();
+
+        // when we don't set yaxis, the rectangle automatically
+        // extends to infinity upwards and downwards
+
+        do {
+            markings.push({ xaxis: { from: i, to: i + 2 * 24 * 60 * 60 * 1000 } });
+            i += 7 * 24 * 60 * 60 * 1000;
+        } while (i < axes.xaxis.max);
+
+        return markings;
+    }
+
+    var options = {
+        xaxis: {
+            mode: "time",
+            tickLength: 1
+        },
+        grid: {
+            markings: weekendAreas
+        },
+        series: {
+            lines: { show: true },
+            points: { show: true }
+        },
+        legend: {show: true}
+    };
+
+    var plot = $.plot("#placeholder", [{label: "Appels à la hotline", data:requests},
+                                       {label: "Rappels par la hotline", data:responses}], options);
+
+});
+
+
+});
+</script>
+</body>
+</html>
