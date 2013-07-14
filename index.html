@@ -1,47 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8" />
-	<title>Open Data Mali</title>
-    <link rel="stylesheet" href="static/css/buttons.css" type="text/css">
-	<link rel="stylesheet" href="static/css/home.css" type="text/css" />
-</head>
-<body class="" lang="fr-FR">
-<header>
-	<img src="static/img/logo_opendata.png" />
-</header>
-<div class="content">
-	<ul class="dashboards">
-		<li class="button button-action">Chargement…</li>
+---
+layout: default
+lang: fr
+title: Accueil
+id: about
+---
+
+<div class="about-content">
+	<h2>Bienvenue sur le portail malien des données ouvertes !</h2>
+	<p><strong>Open Data Mali</strong> est une unitiative de <a href="http://jokkolabs.ml">Jokkolabs Bamako</a>, visant à l'ouverture des donnés (<em>Open Data</em>).</p>
+	<p>Pour ce faire, <acronym title="Open Data Mali">ODML</acronym> assiste toutes les structures à:</p>
+	<ul>
+		<li>Collecter des données de manière électronique.</li>
+		<li>Saisir/Transcrire les données au format papier.</li>
+		<li>Extraire les données des sources non-adaptées (PDF, etc).</li>
+		<li>Publier les données sur Internet dans des formats inter-échangeables.</li>
+		<li>Former les acteurs de la chaîne des données à l'Open Data et son écosystème.</li>
+		<li>Analyser les données et en extraire des rapports utiles.</li>
+		<li>Promouvoir l'ouverture des données et leur production.</li>
 	</ul>
+	<p>Si vous avez des données, ou souhaitez en collecter, n'hésitez pas à nous contacter: <a href="mailto:rgaudin@jokkolabs.net">rgaudin@jokkolabs.net</a>.</p>
+	<p>Vous trouverez sur ce site des analyses de données, un répertoire de données libres (en lien avec le Mali) et bientôt des ressources en français.</p>
 </div>
-<footer>
-<p>Tableaux de bords (pas les données) sous licence <a href="http://freedomdefined.org/Licenses/CC-BY-3.0" title="Creative Commons Attribution License">CC-BY-3.0</a>, sauf si contre-indication. <a href="http://opendatamali.org">Open Data Mali</a>.</p>
-</footer>
-<script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function (){
-	$.getJSON('dashboards.json').done(function (data) {
-		var list = $("<ul />");
-		list.addClass('dashboards');
-		console.log(data);
-		for (var i=0; i<data.length; i++) {
-			var dash = data[i];
-			console.log(dash);
-			var listItem = $("<li />");
-			var link = $("<a />");
-			link.attr('href', dash.url.content);
-			link.html(dash.title);
-			link.addClass('button button-action');
-			listItem.append(link);
-			var desc = $("<p/>");
-			desc.html(dash.short_desc);
-			listItem.append(desc);
-			list.append(listItem);
-		}
-		$("ul.dashboards").replaceWith(list);
-	});
-});
-</script>
-</body>
-</html>
