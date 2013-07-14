@@ -1,7 +1,6 @@
 
 var dashboardsListUrl = '/views/dashboards.json';
-var indexURL = 'https://raw.github.com/opendatamali/registry/master/datapackage-index.json';
-// var indexURL = '/datapackage-index.json';
+var indexURL = '/datasets/datapackage-index.json';
 
 String.prototype.nl2br = function()
 {
