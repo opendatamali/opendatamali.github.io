@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Bureaux de vote – Élections 2013</title>
+<link href="/views/static/css/bootstrap.min.css" rel="stylesheet">
+<link href="/views/static/css/bootstrap-responsive.min.css" rel="stylesheet">
+<style type="text/css">
+.table-info td {
+	text-align: right;
+}
+.table-info th {
+	text-align: center;
+}
+.table-info th:first-of-type {
+	text-align: left;
+}
+.table-info tr:last-of-type {
+	font-weight: bold;
+}
+</style>
+</head>
+<body class="">
+<div class="container">
+
+<h1>Bureaux de votes pour l'élection 2013</h1>
+
+
+<div class="alert alert-warning">
+<p>Quelques statistiques extraites du fichier des bureaux de vote pour l'élection présidentielle de 2013 au Mali.</p>
+<p>Le fichier brut est disponible sur <a href="http://opendata.ml/dataset/?id=bureaux-vote-PRM2013">Open Data Mali</a>.</p>
+<p>Vous pouvez jouer avec les données sur <a href="http://bamboo.io/datasets/88e96ce2927a48809501a67901fb0edc?select={%22elec_by_region%22:1,%22region%22:1}">bamboo.io</a>.</p>
+</div>
+
+<h2>Répartition des électeurs par région</h2>
+<table class="table table-condensed table-hover table-bordered table-striped table-info">
+    <tbody>
+        <tr>
+            <th>Région</th>
+            <th class="span2" colspan="2">Total électeurs</th>
+            <th class="span2" colspan="2">Électeurs Homme</th>
+            <th class="span2" colspan="2">Électeurs Femme</th>
+        </tr>
+    </tbody>
+    </table>
+
+<script type="text/javascript" src="/views/static/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/views/static/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+Number.prototype.formatNumber = function () {
+	return this.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+$(document).ready(function (){
+	// var bamboo_url = 'http://bamboo.io/datasets/88e96ce2927a48809501a67901fb0edc.json?select={%22elec_by_region%22:1,%22region%22:1}&callback=?';
+	var bamboo_url = 'bamboo_data.json';
+
+	$.ajax(bamboo_url, {dataType: "jsonp", jsonp: false, jsonpCallback: "cb" })
+	.done(function (data) {
+
+
+
+		var table = $('.table-info tbody');
+		var grand_total = 0;
+		var male_total = 0;
+		var female_total = 0;
+
+		var get_percent = function (value, total) {
+			return (value * 100 / total).toFixed(2);
+		}
+
+		for (var i=0; i<data.length; i++) {
+			var region = data[i];
+			grand_total += region.elec_by_region;
+			male_total += region.elec_m_by_region;
+			female_total += region.elec_f_by_region;
+
+			var tr = $('<tr/>');
+			tr.addClass(region.region.toLowerCase());
+			var td_name = $('<th/>');
+			td_name.html(region.region);
+			tr.append(td_name);
+
+			// electeurs total
+			var td_total = $('<td/>');
+			td_total.html(region.elec_by_region.formatNumber());
+			tr.append(td_total);
+
+			var td_total_percent = $('<td/>');
+			td_total_percent.addClass('total_percent');
+			tr.append(td_total_percent);
+
+			// total male
+			var td_male = $('<td/>');
+			td_male.html(region.elec_m_by_region.formatNumber());
+			tr.append(td_male);
+
+			var td_male_percent = $('<td/>');
+			td_male_percent.addClass('male_percent');
+			tr.append(td_male_percent);
+
+			// total female
+			var td_female = $('<td/>');
+			td_female.html(region.elec_f_by_region.formatNumber());
+			tr.append(td_female);
+
+			var td_female_percent = $('<td/>');
+			td_female_percent.addClass('female_percent');
+			tr.append(td_female_percent);
+
+			table.append(tr);
+		}
+
+		var total_tr = $('<tr/>');
+		var total_td = $('<th>TOTAUX</th>');
+		var grand_total_td = $('<td colspan="2"/>');
+		grand_total_td.html(grand_total.formatNumber());
+		var male_total_td = $('<td colspan="2"/>');
+		male_total_td.html(male_total.formatNumber());
+		var female_total_td = $('<td colspan="2"/>');
+		female_total_td.html(female_total.formatNumber());
+		total_tr.append(total_td);
+		total_tr.append(grand_total_td);
+		total_tr.append(male_total_td);
+		total_tr.append(female_total_td);
+		table.append(total_tr);
+
+		// update percents
+		for (i=0; i<data.length; i++) {
+			var region = data[i];
+			$('.' + region.region.toLowerCase() + ' .total_percent')
+				.html(get_percent(region.elec_by_region, grand_total) + "%");
+			$('.' + region.region.toLowerCase() + ' .male_percent')
+				.html(get_percent(region.elec_m_by_region, grand_total) + "%");
+			$('.' + region.region.toLowerCase() + ' .female_percent')
+				.html(get_percent(region.elec_f_by_region, grand_total) + "%");
+		}
+
+	})
+	.fail(function (err){
+		alert("Error retrieving data");
+	});
+});
+</script>
+</body>
+</html>
