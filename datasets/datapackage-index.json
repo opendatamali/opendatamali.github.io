@@ -134,13 +134,14 @@
   "hotline-sos-2013": {
     "description": "Liste des appels effectu\u00e9s par la Hotline SOS D\u00e9mocratie/Jokkolabs en vue de l'\u00e9lection pr\u00e9sidentielle de Juillet 2013.\n Chaque appel fait suite \u00e0 une demande d'une personne (bip ou SMS).", 
     "download_url": "https://raw.github.com/opendatamali/sos_hotline_data/master/hotline_data.csv", 
+    "homepage": "http://datahub.io/dataset/hotline-sos-democratie", 
     "keywords": [
       "Hotline", 
       "SOS D\u00e9mocratie", 
       "Mali", 
       "\u00c9lections"
     ], 
-    "last_updated": "2013-07-17T08:33:17.452958", 
+    "last_updated": "2013-07-17T12:14:58.665258", 
     "licenses": [
       {
         "id": "odc-pddl", 
@@ -416,7 +417,7 @@
         "state": {
           "group": "received_on", 
           "series": [
-            "Rate"
+            "topics_count"
           ]
         }, 
         "type": "Graph"
