@@ -1,361 +1,506 @@
 {
-  "hotline-sos-2013": {
-    "description": "Liste des appels effectu\u00e9s par la Hotline SOS D\u00e9mocratie/Jokkolabs en vue de l'\u00e9lection pr\u00e9sidentielle de Juillet 2013.\n Chaque appel fait suite \u00e0 une demande d'une personne (bip ou SMS).",
-    "download_url": "https://raw.github.com/opendatamali/sos_hotline_data/master/hotline_data.csv",
-    "homepage": "http://datahub.io/dataset/hotline-sos-democratie",
-    "keywords": [
-      "Hotline",
-      "SOS D\u00e9mocratie",
-      "Mali",
-      "\u00c9lections"
-    ],
-    "last_updated": "2013-07-12T17:57:20.871217",
-    "licenses": [
-      {
-        "id": "odc-pddl",
-        "url": "http://opendatacommons.org/licenses/pddl/"
-      }
-    ],
-    "name": "hotline-sos-2013",
-    "readme": "Liste des appels effectu\u00e9s par la Hotline SOS D\u00e9mocratie/Jokkolabs en vue de l'\u00e9lection pr\u00e9sidentielle de Juillet 2013.\n Chaque appel fait suite \u00e0 une demande d'une personne (bip ou SMS).",
+  "bureaux-vote-PRM2013": {
+    "description": "Liste exhaustives des bureaux de votes pour l'\u00e9lection pr\u00e9sidentielle de 2013.", 
+    "download_url": "https://raw.github.com/opendatamali/datasets/master/bureaux-vote-PRM2013/liste-bureaux-vote.csv", 
+    "homepage": "http://datahub.io/dataset/bureaux-de-vote-election-presidentielle-2013", 
+    "id": "bureaux-vote-PRM2013", 
+    "name": "bureaux-vote-PRM2013", 
+    "readme": "Liste exhaustives des bureaux de votes pour l'\u00e9lection pr\u00e9sidentielle de 2013.", 
     "resources": [
       {
-        "path": "hotline_data.csv",
+        "path": "Liste-des-bureaux-vote-PRM2013.csv", 
         "schema": {
           "fields": [
             {
-              "id": "received_on",
-              "type": "datetime"
-            },
-            {
-              "id": "operator",
-              "label": "Operateur t\u00e9l\u00e9phonique",
+              "description": "R\u00e9gion", 
+              "id": "REGION", 
+              "label": "R\u00e9gion", 
               "type": "string"
-            },
+            }, 
             {
-              "id": "volunteer",
-              "label": "ID Volontaire",
+              "description": "Cercle", 
+              "id": "CERCLE", 
+              "label": "Cercle", 
               "type": "string"
-            },
+            }, 
             {
-              "id": "event_type",
-              "label": "Type d'appel",
+              "description": "Commune", 
+              "id": "COMMUNE", 
+              "label": "Commune", 
               "type": "string"
-            },
+            }, 
             {
-              "id": "response_date",
-              "label": "Date du rappel",
-              "type": "datetime"
-            },
+              "description": "Village/Fraction/Quartier", 
+              "id": "VFQ", 
+              "label": "Village", 
+              "type": "string"
+            }, 
             {
-              "id": "age",
-              "label": "Age",
+              "description": "Centre de Vote", 
+              "id": "CV", 
+              "label": "Centre de vote", 
+              "type": "string"
+            }, 
+            {
+              "description": "n\u00ba bureau de vote dans le centre", 
+              "id": "BV", 
+              "label": "Bureau de vote", 
               "type": "number"
-            },
+            }, 
             {
-              "id": "sex",
-              "label": "Sexe",
-              "type": "string"
-            },
-            {
-              "id": "duration",
-              "label": "Dur\u00e9e rappel (mn)",
+              "description": "Nb \u00e9lecteurs Homme", 
+              "id": "ELECTEURS_M", 
+              "label": "\u00c9lecteurs Homme", 
               "type": "number"
-            },
+            }, 
             {
-              "id": "location",
-              "label": "Localit\u00e9",
+              "description": "Nb \u00e9lecteurs Femme", 
+              "id": "ELECTEURS_F", 
+              "label": "\u00c9lecteurs Femme", 
+              "type": "number"
+            }, 
+            {
+              "description": "Nb \u00e9lecteurs total", 
+              "id": "ELECTEURS", 
+              "label": "\u00c9lecteurs", 
+              "type": "number"
+            }
+          ]
+        }, 
+        "url": "https://raw.github.com/opendatamali/datasets/master/bureaux-vote-PRM2013/liste-bureaux-vote.csv"
+      }
+    ], 
+    "sources": [
+      {
+        "name": " Commission \u00c9lectorale Nationale Ind\u00e9pendante (CENI)"
+      }
+    ], 
+    "title": "candidats \u00e0 l'\u00e9lection pr\u00e9sidentielle 2013"
+  }, 
+  "candidats-PRM2013": {
+    "description": "Liste exhaustives des candidats \u00e0 l'\u00e9lection pr\u00e9sidentielle de 2013.", 
+    "download_url": "https://raw.github.com/opendatamali/datasets/master/candidats-PRM2013/Liste-des-candidats-PRM2013.csv", 
+    "homepage": "http://datahub.io/dataset/candidats-election-presidentielle-mali-2013", 
+    "id": "candidats-PRM2013", 
+    "licenses": [
+      {
+        "id": "odc-pddl", 
+        "url": "http://opendatacommons.org/licenses/pddl/"
+      }
+    ], 
+    "name": "candidats-PRM2013", 
+    "readme": "Liste exhaustives des candidats \u00e0 l'\u00e9lection pr\u00e9sidentielle de 2013.", 
+    "resources": [
+      {
+        "path": "Liste-des-candidats-PRM2013.csv", 
+        "schema": {
+          "fields": [
+            {
+              "description": "Code Unique", 
+              "id": "Rang", 
+              "label": "Rang", 
+              "type": "number"
+            }, 
+            {
+              "description": "Civilit\u00e9", 
+              "id": "Civilit\u00e9", 
+              "label": "Civilit\u00e9", 
               "type": "string"
-            },
+            }, 
             {
-              "id": "location_slug",
-              "label": "Code localit\u00e9",
+              "description": "Nom", 
+              "id": "Nom", 
+              "label": "Nom", 
               "type": "string"
-            },
+            }, 
             {
-              "id": "location_type",
-              "label": "Type localit\u00e9",
+              "description": "Pr\u00e9nom", 
+              "id": "Pr\u00e9nom", 
+              "label": "Pr\u00e9nom", 
               "type": "string"
-            },
+            }
+          ]
+        }, 
+        "url": "https://raw.github.com/opendatamali/datasets/master/candidats-PRM2013/Liste-des-candidats-PRM2013.csv"
+      }
+    ], 
+    "sources": [
+      {
+        "name": " Commission \u00c9lectorale Nationale Ind\u00e9pendante (CENI)"
+      }
+    ], 
+    "title": "candidats \u00e0 l'\u00e9lection pr\u00e9sidentielle 2013"
+  }, 
+  "hotline-sos-2013": {
+    "description": "Liste des appels effectu\u00e9s par la Hotline SOS D\u00e9mocratie/Jokkolabs en vue de l'\u00e9lection pr\u00e9sidentielle de Juillet 2013.\n Chaque appel fait suite \u00e0 une demande d'une personne (bip ou SMS).", 
+    "download_url": "https://raw.github.com/opendatamali/sos_hotline_data/master/hotline_data.csv", 
+    "keywords": [
+      "Hotline", 
+      "SOS D\u00e9mocratie", 
+      "Mali", 
+      "\u00c9lections"
+    ], 
+    "last_updated": "2013-07-17T08:33:17.452958", 
+    "licenses": [
+      {
+        "id": "odc-pddl", 
+        "url": "http://opendatacommons.org/licenses/pddl/"
+      }
+    ], 
+    "name": "hotline-sos-2013", 
+    "readme": "Liste des appels effectu\u00e9s par la Hotline SOS D\u00e9mocratie/Jokkolabs en vue de l'\u00e9lection pr\u00e9sidentielle de Juillet 2013.\n Chaque appel fait suite \u00e0 une demande d'une personne (bip ou SMS).", 
+    "resources": [
+      {
+        "path": "hotline_data.csv", 
+        "schema": {
+          "fields": [
             {
-              "id": "topics_list",
-              "label": "Sujets abord\u00e9s",
+              "id": "received_on", 
+              "type": "datetime"
+            }, 
+            {
+              "id": "operator", 
+              "label": "Operateur t\u00e9l\u00e9phonique", 
               "type": "string"
-            },
+            }, 
             {
-              "id": "topics_count",
-              "label": "Nb de sujets abord\u00e9s",
+              "id": "volunteer", 
+              "label": "ID Volontaire", 
               "type": "string"
-            },
+            }, 
             {
-              "id": "topic_A1",
-              "label": "Pourquoi vous faites \u00e7a ? Qui \u00eates vous?",
+              "id": "event_type", 
+              "label": "Type d'appel", 
+              "type": "string"
+            }, 
+            {
+              "id": "response_date", 
+              "label": "Date du rappel", 
+              "type": "datetime"
+            }, 
+            {
+              "id": "age", 
+              "label": "Age", 
+              "type": "number"
+            }, 
+            {
+              "id": "sex", 
+              "label": "Sexe", 
+              "type": "string"
+            }, 
+            {
+              "id": "duration", 
+              "label": "Dur\u00e9e rappel (mn)", 
+              "type": "number"
+            }, 
+            {
+              "id": "location", 
+              "label": "Localit\u00e9", 
+              "type": "string"
+            }, 
+            {
+              "id": "location_slug", 
+              "label": "Code localit\u00e9", 
+              "type": "string"
+            }, 
+            {
+              "id": "location_type", 
+              "label": "Type localit\u00e9", 
+              "type": "string"
+            }, 
+            {
+              "id": "topics_list", 
+              "label": "Sujets abord\u00e9s", 
+              "type": "string"
+            }, 
+            {
+              "id": "topics_count", 
+              "label": "Nb de sujets abord\u00e9s", 
+              "type": "string"
+            }, 
+            {
+              "id": "topic_A1", 
+              "label": "Pourquoi vous faites \u00e7a ? Qui \u00eates vous?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_B1",
-              "label": "qu'est ce que la d\u00e9mocratie: comment voit on qu'elle est pr\u00e9sente?",
+              "id": "topic_B1", 
+              "label": "qu'est ce que la d\u00e9mocratie: comment voit on qu'elle est pr\u00e9sente?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_B2",
-              "label": "avantage/inconv\u00e9nients",
+              "id": "topic_B2", 
+              "label": "avantage/inconv\u00e9nients", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_B3",
-              "label": "principes de la d\u00e9mocratie",
+              "id": "topic_B3", 
+              "label": "principes de la d\u00e9mocratie", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_B4",
-              "label": "histoire et application au Mali",
+              "id": "topic_B4", 
+              "label": "histoire et application au Mali", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_C1",
-              "label": "qu'est ce que la d\u00e9centralisation ?",
+              "id": "topic_C1", 
+              "label": "qu'est ce que la d\u00e9centralisation ?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_C2",
-              "label": "Avantages/inconv\u00e9nients de la d\u00e9centralisation",
+              "id": "topic_C2", 
+              "label": "Avantages/inconv\u00e9nients de la d\u00e9centralisation", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_D1",
-              "label": "r\u00f4le et responsabilit\u00e9s des citoyens",
+              "id": "topic_D1", 
+              "label": "r\u00f4le et responsabilit\u00e9s des citoyens", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_D2",
-              "label": "que faire en cas de fraude (t\u00e9moin) ?",
+              "id": "topic_D2", 
+              "label": "que faire en cas de fraude (t\u00e9moin) ?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_D3",
-              "label": "comment le vote est supervis\u00e9 ?",
+              "id": "topic_D3", 
+              "label": "comment le vote est supervis\u00e9 ?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_E1",
-              "label": "comment avoir la carte NINA ? (retrait)",
+              "id": "topic_E1", 
+              "label": "comment avoir la carte NINA ? (retrait)", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_E10",
-              "label": "Procuration",
+              "id": "topic_E10", 
+              "label": "Procuration", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_E2",
-              "label": "qu'est ce que la carte NINA ?",
+              "id": "topic_E2", 
+              "label": "qu'est ce que la carte NINA ?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_E3",
-              "label": "est-ce que j'ai le droit de voter?",
+              "id": "topic_E3", 
+              "label": "est-ce que j'ai le droit de voter?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_E4",
-              "label": "quel rapport avec le ravec ?",
+              "id": "topic_E4", 
+              "label": "quel rapport avec le ravec ?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_E5",
-              "label": "perte de carte Nina ; que faire?",
+              "id": "topic_E5", 
+              "label": "perte de carte Nina ; que faire?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_E6",
-              "label": "Erreur sur la carte nina",
+              "id": "topic_E6", 
+              "label": "Erreur sur la carte nina", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_E7",
-              "label": "N'est pas sur la liste",
+              "id": "topic_E7", 
+              "label": "N'est pas sur la liste", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_E8",
-              "label": "Transfert de bureau",
+              "id": "topic_E8", 
+              "label": "Transfert de bureau", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_E9",
-              "label": "Comment faire le RAVEC actuellement ?",
+              "id": "topic_E9", 
+              "label": "Comment faire le RAVEC actuellement ?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F1",
-              "label": "C'est quoi le vote?",
+              "id": "topic_F1", 
+              "label": "C'est quoi le vote?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F10",
-              "label": "Combien de bureaux de vote ? ",
+              "id": "topic_F10", 
+              "label": "Combien de bureaux de vote ? ", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F11",
-              "label": "comment \u00eatre sur que mon vote a \u00e9t\u00e9 prit en compte?",
+              "id": "topic_F11", 
+              "label": "comment \u00eatre sur que mon vote a \u00e9t\u00e9 prit en compte?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F12",
-              "label": "comment choisir en pratique pour qui voter (pr\u00e9sentation du bulletin)",
+              "id": "topic_F12", 
+              "label": "comment choisir en pratique pour qui voter (pr\u00e9sentation du bulletin)", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F2",
-              "label": "Avec quoi votons nous ? (en g\u00e9n\u00e9ral)",
+              "id": "topic_F2", 
+              "label": "Avec quoi votons nous ? (en g\u00e9n\u00e9ral)", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F3",
-              "label": "Pourquoi voter?",
+              "id": "topic_F3", 
+              "label": "Pourquoi voter?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F4",
-              "label": "Pourquoi voter pour un candidat (en particulier) ?",
+              "id": "topic_F4", 
+              "label": "Pourquoi voter pour un candidat (en particulier) ?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F5",
-              "label": "Quels sont les avantages d'aller voter?",
+              "id": "topic_F5", 
+              "label": "Quels sont les avantages d'aller voter?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F6",
-              "label": "Quels sont les inconv\u00e9nients de ne pas aller voter?",
+              "id": "topic_F6", 
+              "label": "Quels sont les inconv\u00e9nients de ne pas aller voter?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F7",
-              "label": "Qu'est ce qu'un bulletin nul?",
+              "id": "topic_F7", 
+              "label": "Qu'est ce qu'un bulletin nul?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F8",
-              "label": "Comment voter en pratique (urne, encre, isoloir)",
+              "id": "topic_F8", 
+              "label": "Comment voter en pratique (urne, encre, isoloir)", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_F9",
-              "label": "Ou puis-je voter?",
+              "id": "topic_F9", 
+              "label": "Ou puis-je voter?", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_G1",
-              "label": "Rapport d'incident",
+              "id": "topic_G1", 
+              "label": "Rapport d'incident", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_H1",
-              "label": "Autre question",
+              "id": "topic_H1", 
+              "label": "Autre question", 
               "type": "boolean"
-            },
+            }, 
             {
-              "id": "topic_H2",
-              "label": "Ne repond pas",
+              "id": "topic_H2", 
+              "label": "Ne repond pas", 
+              "type": "boolean"
+            }, 
+            {
+              "id": "topic_H3", 
+              "label": "D\u00e9j\u00e0 rappel\u00e9", 
               "type": "boolean"
             }
           ]
-        },
+        }, 
         "url": "https://raw.github.com/opendatamali/sos_hotline_data/master/hotline_data.csv"
       }
-    ],
+    ], 
     "sources": [
       {
-        "name": "Jokkolabs Bamako",
+        "name": "Jokkolabs Bamako", 
         "web": "http://jokkolabs.ml"
       }
-    ],
-    "title": "Hotline SOS D\u00e9mocratie 2013.",
+    ], 
+    "title": "Hotline SOS D\u00e9mocratie 2013.", 
     "views": [
       {
-        "id": "graph",
+        "id": "graph", 
         "state": {
-          "group": "received_on",
+          "group": "received_on", 
           "series": [
             "Rate"
           ]
-        },
+        }, 
         "type": "Graph"
       }
     ]
-  },
-  "villages-mali": {
-    "description": "Liste des villages du Mali.",
-    "download_url": "https://raw.github.com/opendatamali/datasets/master/villages-mali-test/villages_mali.csv",
-    "id": "test-villages",
+  }, 
+  "localites-mali": {
+    "description": "Liste codifi\u00e9e de toutes les localit\u00e9s du Mali.", 
+    "download_url": "https://raw.github.com/opendatamali/datasets/master/localites-mali/mali-entities.csv", 
+    "homepage": "http://datahub.io/dataset/localites-du-mali", 
+    "id": "localites-mali", 
     "licenses": [
       {
-        "id": "odc-pddl",
+        "id": "odc-pddl", 
         "url": "http://opendatacommons.org/licenses/pddl/"
       }
-    ],
-    "name": "villages-mali",
-    "readme": "Liste des villages du Mali.",
-    "readme_html": "Test",
+    ], 
+    "name": "localites-mali", 
+    "readme": "Liste codifi\u00e9e de toutes les localit\u00e9s du Mali.", 
     "resources": [
       {
-        "path": "villages_mali.csv",
+        "path": "mali-entities.csv", 
         "schema": {
           "fields": [
             {
-              "description": "Code Unique",
-              "id": "Code",
-              "type": "number"
-            },
-            {
-              "description": "Cercle",
-              "id": "Cercle",
+              "description": "Code Unique", 
+              "id": "code", 
               "type": "string"
-            },
+            }, 
             {
-              "description": "Commune",
-              "id": "Commune",
+              "description": "R\u00e9gion", 
+              "id": "region", 
               "type": "string"
-            },
+            }, 
             {
-              "description": "Chef Lieu",
-              "id": "ChefLieu",
+              "description": "Cercle", 
+              "id": "cercle", 
               "type": "string"
-            },
+            }, 
             {
-              "description": "Nom",
-              "id": "Nom",
+              "description": "Commune", 
+              "id": "commune", 
               "type": "string"
-            },
+            }, 
             {
-              "description": "Longitude",
-              "id": "Longitude",
-              "type": "number"
-            },
+              "description": "Village / Fraction / Quartier", 
+              "id": "vfq", 
+              "type": "string"
+            }, 
             {
-              "description": "Latitude",
-              "id": "Latitude",
-              "type": "number"
-            },
-            {
-              "description": "GPS Coordinates",
-              "id": "GPS",
+              "description": "GPS Coordinates", 
+              "id": "gps", 
               "type": "geopoint"
+            }, 
+            {
+              "description": "Longitude", 
+              "id": "longitude", 
+              "type": "number"
+            }, 
+            {
+              "description": "Latitude", 
+              "id": "latitude", 
+              "type": "number"
+            }, 
+            {
+              "description": "Code du parent", 
+              "id": "parent_code", 
+              "type": "string"
             }
           ]
-        },
-        "url": "https://raw.github.com/opendatamali/datasets/master/villages-mali-test/villages_mali.csv"
+        }, 
+        "url": "https://raw.github.com/opendatamali/datasets/master/localites-mali/mali-entities.csv"
       }
-    ],
+    ], 
     "sources": [
       {
-        "name": "ANTIM",
+        "name": "ANTIM", 
         "web": "http://antim.sante.gov.ml"
+      }, 
+      {
+        "name": "YELEMAN", 
+        "web": "http://yeleman.com"
       }
-    ],
-    "title": "Villages du Mali"
+    ], 
+    "title": "Localit\u00e9s du Mali"
   }
 }
