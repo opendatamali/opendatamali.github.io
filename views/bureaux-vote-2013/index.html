@@ -131,9 +131,9 @@ $(document).ready(function (){
 			$('.' + region.region.toLowerCase() + ' .total_percent')
 				.html(get_percent(region.elec_by_region, grand_total) + "%");
 			$('.' + region.region.toLowerCase() + ' .male_percent')
-				.html(get_percent(region.elec_m_by_region, grand_total) + "%");
+				.html(get_percent(region.elec_m_by_region, male_total) + "%");
 			$('.' + region.region.toLowerCase() + ' .female_percent')
-				.html(get_percent(region.elec_f_by_region, grand_total) + "%");
+				.html(get_percent(region.elec_f_by_region, female_total) + "%");
 		}
 
 	})
