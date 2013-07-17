@@ -30,7 +30,7 @@
 <div class="alert alert-warning">
 <p>Quelques statistiques extraites du fichier des bureaux de vote pour l'élection présidentielle de 2013 au Mali.</p>
 <p>Le fichier brut est disponible sur <a href="http://opendata.ml/dataset/?id=bureaux-vote-PRM2013">Open Data Mali</a>.</p>
-<p>Vous pouvez jouer avec les données sur <a href="http://bamboo.io/datasets/88e96ce2927a48809501a67901fb0edc?select={%22elec_by_region%22:1,%22region%22:1}">bamboo.io</a>.</p>
+<p>Vous pouvez jouer avec les données sur <a href="http://bamboo.io/datasets/88e96ce2927a48809501a67901fb0edc?select={%22elec_by_region%22:1,%22elec_m_by_region%22:1,%22elec_f_by_region%22:1,%22region%22:1,%22count_bv_region%22:1}&order_by=-elec_by_region">bamboo.io</a>.</p>
 </div>
 
 <h2>Répartition des électeurs par région</h2>
@@ -52,7 +52,7 @@ Number.prototype.formatNumber = function () {
 	return this.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 $(document).ready(function (){
-	// var bamboo_url = 'http://bamboo.io/datasets/88e96ce2927a48809501a67901fb0edc.json?select={%22elec_by_region%22:1,%22region%22:1}&callback=?';
+	// var bamboo_url = 'http://bamboo.io/datasets/88e96ce2927a48809501a67901fb0edc?select={"elec_by_region":1,"elec_m_by_region":1,"elec_f_by_region":1,"region":1,"count_bv_region":1}&order_by=-elec_by_region&callback=?';
 	var bamboo_url = 'bamboo_data.json';
 
 	$.ajax(bamboo_url, {dataType: "jsonp", jsonp: false, jsonpCallback: "cb" })
