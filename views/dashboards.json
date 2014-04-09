@@ -1,1 +1,35 @@
-[{"url": {"content": "/views/hotline-sos-2013", "type": "path"}, "short_desc": "Statistiques “live” de la hotline.", "title": "Hotline SOS Démocratie"}, {"url": {"content": "/views/bureaux-vote-2013", "type": "path"}, "short_desc": "Statistiques sur les nombres d'électeurs", "title": "Bureaux de vote 2013"}]
+[
+  {
+    "url": {
+      "content": "\/views\/hotline-sos-2013",
+      "type": "path"
+    },
+    "short_desc": "Statistiques \u201clive\u201d de la hotline.",
+    "title": "Hotline SOS D\u00e9mocratie"
+  },
+  {
+    "url": {
+      "content": "\/views\/hotline-sos-2013-2",
+      "type": "path"
+    },
+    "short_desc": "Statistiques de la hotline (l\u00e9gislatives).",
+    "title": "Hotline SOS D\u00e9mocratie (l\u00e9gislatives)"
+  },
+  {
+    "url": {
+      "content": "\/views\/bureaux-vote-2013",
+      "type": "path"
+    },
+    "short_desc": "Statistiques sur les nombres d'\u00e9lecteurs",
+    "title": "Bureaux de vote 2013"
+  },
+  {
+    "url": {
+      "content": "\/views\/delestages-edm-2014",
+      "type": "path"
+    },
+    "short_desc": "Programmes des d\u00e9lestages EDM 2014.",
+    "title": "D\u00e9lestages EDM 2014"
+  }
+]
+
