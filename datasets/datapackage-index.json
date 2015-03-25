@@ -888,17 +888,17 @@
                     {
                         "description": "Presence de latrines",
                         "id": "PRESENCE_LATRINES",
-                        "type": "string"
+                        "type": "number"
                     },
                     {
                         "description": "Nombre de latrines filles séparées",
                         "id": "LATRINES_FILLES_SEPAREES",
-                        "type": "string"
+                        "type": "number"
                     },
                     {
                         "description": "Nombre de latrines",
                         "id": "NOMBRE_LATRINES",
-                        "type": "string"
+                        "type": "number"
                     },
                     {
                         "description": "Eau potable",
@@ -908,22 +908,22 @@
                     {
                         "description": "Nombre de garçons",
                         "id": "GARCONS",
-                        "type": "string"
+                        "type": "number"
                     },
                     {
                         "description": "Nombre de filles",
                         "id": "FILLES",
-                        "type": "string"
+                        "type": "number"
                     },
                     {
                         "description": "Total",
                         "id": "TOTAL",
-                        "type": "string"
+                        "type": "number"
                     },
                     {
                         "description": "Nombre d'enseignants",
                         "id": "NBRE ENSEIGNANTS",
-                        "type": "string"
+                        "type": "number"
                     }
                 ]
             },
