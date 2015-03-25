@@ -796,5 +796,150 @@
       }
     ],
     "title": "Localit\u00e9s du Mali"
+  },
+  "ecoles-mali": {
+    "description": "Liste des ecoles du Mali.",
+    "download_url": "https://github.com/jokkolabs/mali_schools/raw/master/MLI_schools.csv",
+    "homepage": "http://datahub.io/dataset/ecole-mali",
+    "id": "MLI_schools",
+    "licenses": [
+        {
+            "id": "odc-pddl",
+            "url": "http://opendatacommons.org/licenses/pddl/"
+        }
+    ],
+    "name": "ecoles-mali",
+    "readme": "Liste des ecoles du Mali.",
+    "resources": [
+        {
+            "path": "MLI_schools.csv",
+            "schema": {
+            "fields": [
+                    {
+                        "description": "Région",
+                        "id": "Region",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Academie d'enseignement",
+                        "id": "AE",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Centre d'Animation Pédagogique",
+                        "id": "CAP",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Cercle",
+                        "id": "cercle",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Commune",
+                        "id": "commune",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Nom de l'etablissement",
+                        "id": "NOM_ETABLISSEMENT",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Localites",
+                        "id": "Localites",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Longitude",
+                        "id": "X",
+                        "type": "number"
+                    },
+                    {
+                        "description": "Latitude",
+                        "id": "Y",
+                        "type": "number"
+                    },
+                    {
+                        "description": "Code etablissement",
+                        "id": "CODE_ETABLISSEMENT",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Localisation",
+                        "id": "Localisation",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Cycle",
+                        "id": "CYCLE",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Statut",
+                        "id": "STATUT",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Presence de restaurant",
+                        "id": "PRESENCE_RESTAURANT",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Presence de latrines",
+                        "id": "PRESENCE_LATRINES",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Nombre de latrines filles séparées",
+                        "id": "LATRINES_FILLES_SEPAREES",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Nombre de latrines",
+                        "id": "NOMBRE_LATRINES",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Eau potable",
+                        "id": "EAU_POTABLE",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Nombre de garçons",
+                        "id": "GARCONS",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Nombre de filles",
+                        "id": "FILLES",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Total",
+                        "id": "TOTAL",
+                        "type": "string"
+                    },
+                    {
+                        "description": "Nombre d'enseignants",
+                        "id": "NBRE ENSEIGNANTS",
+                        "type": "string"
+                    }
+                ]
+            },
+            "url": "https://github.com/jokkolabs/mali_schools/raw/master/MLI_schools.csv"
+        }
+    ],
+    "sources": [
+        {
+            "name": "UNICEF",
+            "web": "http://unicef.org"
+        },
+        {
+            "name": "JOKKOLABS",
+            "web": "http://jokkolabs.ml"
+        }
+    ],
+    "title": "Ecoles du Mali",
   }
 }
