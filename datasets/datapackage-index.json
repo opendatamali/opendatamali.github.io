@@ -799,7 +799,7 @@
   },
   "ecoles-mali": {
     "description": "Liste des ecoles du Mali.",
-    "download_url": "https://github.com/jokkolabs/mali_schools/raw/master/MLI_schools.csv",
+    "download_url": "https://github.com/opendatamali/datasets/blob/master/ecole-mali/MLI_schools.csv",
     "homepage": "http://datahub.io/dataset/ecole-mali",
     "id": "MLI_schools",
     "licenses": [
@@ -927,7 +927,7 @@
                     }
                 ]
             },
-            "url": "https://github.com/jokkolabs/mali_schools/raw/master/MLI_schools.csv"
+            "url": "https://github.com/opendatamali/datasets/blob/master/ecole-mali/MLI_schools.csv"
         }
     ],
     "sources": [
